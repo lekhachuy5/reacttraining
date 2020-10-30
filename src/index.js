@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Mini from './minibook';
+import Propstu from './propstutorials';
+import SimpList from './simplebooklist';
 //css
 import './index.css';
 
@@ -40,4 +42,6 @@ const Hello = () => <h1>hello everyone</h1>;
 
 
 ReactDOM.render(<Greeting />, document.getElementById('root'));
-ReactDOM.render(<Mini/>, document.getElementById('mini'));
+// ReactDOM.render(<Mini/>, document.getElementById('mini'));
+// ReactDOM.render(<Propstu/>, document.getElementById('mini'));
+ReactDOM.render(<SimpList/>, document.getElementById('mini'));
