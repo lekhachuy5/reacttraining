@@ -6,12 +6,14 @@ import "./index.css";
 //props list
 const books = [
   {
+    id: 1,
     author: "Huy Le",
     title: "I Love You to the Moon and Back",
     img: "./logo512.png",
   },
 
   {
+    id: 2,
     author: "Tu Nguyen",
     title: "I Love You to the Sun and White",
     img: "./logo512.png",
@@ -27,11 +29,12 @@ console.log(newName);
 function BookList() {
   return (
     <section className="booklist">
-      {books.map((book) => {
+      {books.map((book,index) => {
         // const { img, title, author } = book;
         return (
           <div>
-            <Book book={book} ></Book>
+            {/* {key prop & spread} */}
+            <Book key={index} {...book}></Book>
           </div>
         );
       })}
@@ -44,7 +47,7 @@ function BookList() {
 // props destructuring
 const Book = (props) => {
   //can use this to replace for props
-  const { img, title, author } = props.book;
+  const { img, title, author } = props;
   console.log(props);
   return (
     <article className="book">
